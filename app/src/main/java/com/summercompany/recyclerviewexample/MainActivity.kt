@@ -1,5 +1,6 @@
 package com.summercompany.recyclerviewexample
 
+import android.media.JetPlayer
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,12 +11,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                        //objeto de clase SuperHero
-
-    val superHeroFirst = listOf<>SuperHero("Kotlinman","Jetbrains", "Arsenio", "https//")
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //LLAMAR DESDE ACTIVITY A LA CLASE SUPERHEROPROVIDER
+        SuperHeroProvider.superHeroList
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
